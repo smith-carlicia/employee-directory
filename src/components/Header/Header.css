@@ -1,0 +1,15 @@
+.header {
+    background: darkblue;
+    margin-top: 0px;
+    height: 100%;
+    border-bottom: 5px solid;
+    border-color: darkred;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
