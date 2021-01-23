@@ -1,7 +1,8 @@
 import React, { useReducer } from "react";
-import API from "../Api.jsx";
+import API from './utils/API.jsx';
 
 function DataBody() {
+    console.log(API);
     return(
         <tbody>
             <td>{user.picture}</td>
@@ -10,7 +11,6 @@ function DataBody() {
             <td>{user.email}</td>
             <td>{user.dob}</td>
         </tbody>
-        // <API />
     )
 }
 

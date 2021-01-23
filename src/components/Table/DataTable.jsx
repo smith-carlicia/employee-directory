@@ -2,7 +2,9 @@ import React from "react";
 import "./DataTable.css";
 import DataBody from "./DataBody.jsx";
 
-function Table(){
+function Table(props){
+
+    console.log(props.dataNameInProps);
 
     const [users, setUsers] = useState[{}];
     const [order, setOrder] = useState["descend"];
