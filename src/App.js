@@ -5,9 +5,13 @@ import Text from './Text.js';
 import Header from './components/Header/Header.jsx';
 import Search from './components/Search/Search.jsx';
 import Button from './components/Button/Button.jsx';
-import Table from './components/Table/Table.jsx';
+import Table from './components/Table/DataTable.jsx';
+import APICall from './utils/API.jsx';
 
 function App() {
+
+  const dataToGoToComponent = APICall()
+
   return (
     <div className="App">
       <Header className="App-header">
@@ -27,7 +31,7 @@ function App() {
       </Header>
       <Search />
         {/* <Button /> */}
-      <Table />
+      <Table dataNameInProps={dataToGoToComponent} />
     </div>
   );
 }
