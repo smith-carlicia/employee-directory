@@ -1,13 +1,14 @@
 import React from "react";
 import "./DataTable.css";
-import DataBody from "./DataBody.jsx";
-import APICall from '../../utils/API.jsx';
+// import DataBody from "./DataBody.jsx";
+import DataArea from "./DataArea.jsx";
+// import APICall from '../../utils/API.jsx';
 
-function Table(props){
+function DataTable(props){
+    // const dataToGoToComponent = APICall();
 
-    const dataToGoToComponent = APICall();
     console.log(props.dataNameInProps);
-    console.log('API Call Data: ', dataToGoToComponent);
+    // console.log('API Call Data: ', dataToGoToComponent);
     // const [myState, setMyState] = useState(props.foo)
    
 
@@ -16,17 +17,19 @@ function Table(props){
             <table className="table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>DOB</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">DOB</th>
                     </tr>
                 </thead>
-                <DataBody dataNameInProps={dataToGoToComponent} />
+                <DataArea />
+                {/* <DataBody  users={users} /> */}
+                {/* dataNameInProps={dataToGoToComponent} */}
             </table>
         </wrapper>
     )
 }
 
-export default Table;
+export default DataTable;
