@@ -25,7 +25,7 @@ function DataTable(props){
                     </tr>
                 </thead>
                 {/* <DataArea /> */}
-                <DataBody props={props.DataTable}
+                <DataBody props={props.DataArea}
                 />
                 {/* dataNameInProps={dataToGoToComponent} */}
             </table>
