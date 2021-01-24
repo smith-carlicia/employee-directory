@@ -1,18 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import Text from './Text.js';
-// import API from './components/API/API.jsx';
+// import Text from './Text.js';
 import Header from './components/Header/Header.jsx';
 import Search from './components/Search/Search.jsx';
 import Button from './components/Button/Button.jsx';
 import Table from './components/Table/DataTable.jsx';
 import Body from './components/Table/DataBody.jsx';
-import APICall from './utils/API.jsx';
+
 
 function App() {
-
-  const dataToGoToComponent = APICall()
-  console.log('API Call Data: ', dataToGoToComponent);
+  
 
   return (
     <div className="App">
@@ -33,11 +30,13 @@ function App() {
       </Header>
       <Search />
         {/* <Button /> */}
-      <Table dataNameInProps={dataToGoToComponent}>
-        <Body users={users} />
+      <Table>
+        <Body />
       </Table>
     </div>
   );
 }
+
+// users={users}
 
 export default App;

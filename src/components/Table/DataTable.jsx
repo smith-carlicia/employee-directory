@@ -1,33 +1,21 @@
 import React from "react";
 import "./DataTable.css";
 import DataBody from "./DataBody.jsx";
+import APICall from '../../utils/API.jsx';
 
 function Table(props){
 
     console.log(props.dataNameInProps);
+    console.log('API Call Data: ', dataToGoToComponent);
 
-
-    state={
-        users: [{}],
-        order: "descend",
-        filteredUsers: [{}]
-    }
-  
+    const dataToGoToComponent = APICall();
     // const [myState, setMyState] = useState(props.foo)
-  
-    headings = [
-        { name: "Image", width: "10%" },
-        { name: "Name", width: "10%" },
-        { name: "Phone", width: "20%" },
-        { name: "Email", width: "20%" },
-        { name: "DOB", width: "10%" }
-    ];
    
 
-    return(
+    render(
         <wrapper className="table row">
             <table className="table-bordered table-striped">
-                <thead onClick={()=>{useState({state: state[{}]})}}>
+                <thead>
                     <tr>
                         <th>Image</th>
                         <th>Name</th>
@@ -36,7 +24,7 @@ function Table(props){
                         <th>DOB</th>
                     </tr>
                 </thead>
-                <DataBody />
+                <DataBody dataNameInProps={dataToGoToComponent} />
             </table>
         </wrapper>
     )
