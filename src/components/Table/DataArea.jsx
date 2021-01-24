@@ -7,6 +7,7 @@ export default class DataArea extends React.Component {
 
     componentDidMount(props) {
         const dataToGoToComponent = APICall();
+        
         console.log(dataToGoToComponent);
         console.log(props.dataNameInProps);
 

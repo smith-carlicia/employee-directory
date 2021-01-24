@@ -1,8 +1,8 @@
-import React, { useReducer } from "react";
-import API from '../../utils/API.jsx';
+import React from "react";
+
 
 function DataBody({user}) {
-    console.log(API);
+    
     console.log({user});
     return(
         <tbody key={user}>
