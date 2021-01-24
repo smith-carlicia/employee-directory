@@ -6,16 +6,18 @@ function Table(props){
 
     console.log(props.dataNameInProps);
 
-    const [users, setUsers] = useState[{}];
-    const [order, setOrder] = useState["descend"];
-    const [filteredUsers, setFilteredUsers] = useState[{}];
-
-    const sort = ()=> {
-        setUsers(users);
-        setOrder(order);
-        setFilteredUsers(filteredUsers);
-    };
-
+    state={
+        users: [{}],
+        order: "descend",
+        filteredUsers: [{}]
+    }
+  
+    // let sort = ()=> {
+    //     setUsers(users);
+    //     setOrder(order);
+    //     setFilteredUsers(filteredUsers);
+    // };
+  
     headings = [
         { name: "Image", width: "10%" },
         { name: "Name", width: "10%" },
@@ -23,11 +25,12 @@ function Table(props){
         { name: "Email", width: "20%" },
         { name: "DOB", width: "10%" }
     ];
+   
 
     return(
         <wrapper className="table row">
             <table className="table-bordered table-striped">
-                <thead>
+                <thead onClick={()=>{this.setState({this.state:this.state.[{}])}}>{this.props.texttoshow}>
                     <tr>
                         <th>Image</th>
                         <th>Name</th>
