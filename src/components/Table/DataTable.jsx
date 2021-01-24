@@ -6,17 +6,14 @@ function Table(props){
 
     console.log(props.dataNameInProps);
 
+
     state={
         users: [{}],
         order: "descend",
         filteredUsers: [{}]
     }
   
-    // let sort = ()=> {
-    //     setUsers(users);
-    //     setOrder(order);
-    //     setFilteredUsers(filteredUsers);
-    // };
+    // const [myState, setMyState] = useState(props.foo)
   
     headings = [
         { name: "Image", width: "10%" },
@@ -30,7 +27,7 @@ function Table(props){
     return(
         <wrapper className="table row">
             <table className="table-bordered table-striped">
-                <thead onClick={()=>{this.setState({this.state:this.state.[{}])}}>{this.props.texttoshow}>
+                <thead onClick={()=>{useState({state: state[{}]})}}>
                     <tr>
                         <th>Image</th>
                         <th>Name</th>
