@@ -4,24 +4,22 @@ import DataArea from '../Table/DataArea.jsx';
 
 function Search(values, sortedUsers) {
 
-    let handleSearchChange = event => {
-        console.log(event.target.value);
+    // let handleSearchChange = event => {
+    //     console.log(event.target.value);
     
-        const filter = event.target.value;
-    //   <!-- create re-useable method that will filter the api response based on the value in the search box -->
-        const filteredList = this.users.filter
+    //     const filter = event.target.value;
+    // //   <!-- create re-useable method that will filter the api response based on the value in the search box -->
+    //     const filteredList = this.users.filter;
 
-        setFilteredUsers(this.sortedUsers)
+    //     (response => {
+    //       let values = Object.values(response)
+    //         .join("")
+    //         .toLowerCase();
+    //       })
+    //       return values.indexOf(filter.toLowerCase()) !== -1;
+    //     }
     
-        (response => {
-          let values = Object.values(response)
-            .join("")
-            .toLowerCase();
-          })
-          return values.indexOf(filter.toLowerCase()) !== -1;
-        }
-    
-        setFilteredUsers(filteredList)
+    //     setFilteredUsers(filteredList)
 
     return (
         <div className="Search-container">
