@@ -1,6 +1,7 @@
 import React from "react";
-import DataTable from '../Table/DataTable.jsx';
+// import DataTable from '../Table/DataTable.jsx';
 import DataArea from '../Table/DataArea.jsx';
+// import DataBody from "../Table/DataBody.jsx";
 
 function Search(values, sortedUsers) {
 
@@ -26,9 +27,7 @@ function Search(values, sortedUsers) {
             <input className="search-input">
             </input>
             <button className="searchButton btn-primary mb-2" type="submit">Search</button> */
-             <DataTable>
-                 <DataArea />
-             </DataTable>
+             <DataArea />
          </div>
         
     )
