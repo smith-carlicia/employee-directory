@@ -1,6 +1,6 @@
 import React from "react";
 import './Header.css';
-import Table from './Table/DataTable.jsx';
+// import Table from './Table/DataTable.jsx';
 
 function Header(){
    return(
