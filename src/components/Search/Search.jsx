@@ -1,18 +1,17 @@
 import React from "react";
-import DataTable from './Table/DataTable.jsx';
-import DataArea from './Table/DataArea.jsx';
+import DataTable from '../Table/DataTable.jsx';
+import DataArea from '../Table/DataArea.jsx';
 
-function Search() {
+function Search(values, sortedUsers) {
 
-    handleSearchChange = event => {
+    let handleSearchChange = event => {
         console.log(event.target.value);
     
         const filter = event.target.value;
     //   <!-- create re-useable method that will filter the api response based on the value in the search box -->
-    
-        const filteredList = this.state.users.filter
-    
-        setFilteredUsers(sortedUsers)
+        const filteredList = this.users.filter
+
+        setFilteredUsers(this.sortedUsers)
     
         (response => {
           let values = Object.values(response)
@@ -23,7 +22,7 @@ function Search() {
         }
     
         setFilteredUsers(filteredList)
-        
+
     return (
         <div className="Search-container">
             <input className="search-input">
