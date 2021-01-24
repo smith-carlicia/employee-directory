@@ -1,5 +1,4 @@
 import React from "react";
-// import Nav from './Nav/Nav.jsx';
 import DataTable from './DataTable.jsx';
 import APICall from '../../utils/API.jsx';
 
@@ -7,7 +6,7 @@ export default class DataArea extends React.Component {
 
     componentDidMount(props) {
         const dataToGoToComponent = APICall();
-        
+
         console.log(dataToGoToComponent);
         console.log(props.dataNameInProps);
 
