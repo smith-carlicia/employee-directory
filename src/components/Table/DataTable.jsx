@@ -1,7 +1,7 @@
 import React from "react";
 import "./DataTable.css";
-// import DataBody from "./DataBody.jsx";
-import DataArea from "./DataArea.jsx";
+import DataBody from "./DataBody.jsx";
+// import DataArea from "./DataArea.jsx";
 // import APICall from '../../utils/API.jsx';
 
 function DataTable(props){
@@ -24,8 +24,9 @@ function DataTable(props){
                         <th scope="col">DOB</th>
                     </tr>
                 </thead>
-                <DataArea />
-                {/* <DataBody  users={users} /> */}
+                {/* <DataArea /> */}
+                <DataBody props={props.DataTable}
+                />
                 {/* dataNameInProps={dataToGoToComponent} */}
             </table>
         </wrapper>

@@ -17,7 +17,7 @@ export default class DataArea extends React.Component {
           });
         });
     }
-
+    
     state = {
       users: [{}],
       order: "descend",
@@ -51,6 +51,7 @@ export default class DataArea extends React.Component {
         headings={this.headings}
         users={this.state.filteredUsers}
         handleSort={this.handleSort}
+        // dataNameInProps={dataToGoToComponent}
       />
       )
     }
