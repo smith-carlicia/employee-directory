@@ -5,7 +5,7 @@ function DataBody({user}) {
     console.log(API);
     return(
         <tbody key={user}>
-            <td>{user.picture}</td>
+            <td><img src={user.picture.thumbnail} alt="user" /></td>
             <td>{user.name}</td>
             <td>{user.cell}</td>
             <td>{user.email}</td>

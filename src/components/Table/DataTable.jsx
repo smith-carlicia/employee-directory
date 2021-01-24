@@ -5,14 +5,13 @@ import APICall from '../../utils/API.jsx';
 
 function Table(props){
 
+    const dataToGoToComponent = APICall();
     console.log(props.dataNameInProps);
     console.log('API Call Data: ', dataToGoToComponent);
-
-    const dataToGoToComponent = APICall();
     // const [myState, setMyState] = useState(props.foo)
    
 
-    render(
+    return(
         <wrapper className="table row">
             <table className="table-bordered table-striped">
                 <thead>

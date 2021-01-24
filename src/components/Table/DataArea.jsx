@@ -17,9 +17,9 @@ export default class DataArea extends React.Component {
 
     render(){
         <DataTable
-           headings={_this_.headings}
-           users={_this_.state.filteredUsers}
-           handleSort={_this_.handleSort}
+           headings={this.headings}
+           users={this.state.filteredUsers}
+           handleSort={this.handleSort}
         />
     }
 }
