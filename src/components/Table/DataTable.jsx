@@ -13,7 +13,7 @@ function DataTable(props){
    
 
     return(
-        <wrapper className="table row">
+        <div className="container table">
             <table className="table-bordered table-striped">
                 <thead>
                     <tr>
@@ -29,7 +29,7 @@ function DataTable(props){
                 />
                 {/* dataNameInProps={dataToGoToComponent} */}
             </table>
-        </wrapper>
+        </div>
     )
 }
 
