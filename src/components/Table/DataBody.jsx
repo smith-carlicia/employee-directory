@@ -5,8 +5,8 @@ function DataBody(props) {
     
     console.log(props);
     return(
-        <tbody key="prop"s>
-            <td><img src={props.picture} alt="prop" /></td>
+        <tbody key="props">
+            <td><img src={props.picture} alt="props" /></td>
             <td>{props.name}</td>
             <td>{props.cell}</td>
             <td>{props.email}</td>
