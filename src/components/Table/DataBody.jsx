@@ -3,17 +3,17 @@ import React from "react";
 import DataTable from './DataTable.jsx';
 
 function DataBody(props) {
-    // const random = useContext(DataTable);
     // const array = random.results[0];
     return(
-            <thead key={props}>
-                {props.map((results) => (
+            <thead >
+                {props.results.map((results) => (
+                    // key={props.results}
                      <tr>
-                    <td><img src={results.picture} alt="props" /></td>
-                        <td>{results.name}</td>
-                      <td>{results.cell}</td>
-                      <td>{results.email}</td>
-                      <td>{results.dob}</td>
+                    <td><img src={props.results.users.picture} alt="props" /></td>
+                        <td>{props.results.users.name}</td>
+                      <td>{props.results.users.cell}</td>
+                      <td>{props.results.users.email}</td>
+                      <td>{props.results.users.dob}</td>
                     </tr>
                 )
                     )}
