@@ -6,8 +6,8 @@ function DataBody(props) {
     // const random = useContext(DataTable);
     // const array = random.results[0];
     return(
-            <thead key={data.results}>
-                {data.results.map((results) => (
+            <thead key={props}>
+                {props.map((results) => (
                      <tr>
                     <td><img src={results.picture} alt="props" /></td>
                         <td>{results.name}</td>
