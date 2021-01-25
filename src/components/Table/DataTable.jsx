@@ -7,7 +7,7 @@ import DataBody from "./DataBody.jsx";
 function DataTable(props){
     // const dataToGoToComponent = APICall();
 
-    console.log(props.dataNameInProps);
+    console.log(props);
     // console.log('API Call Data: ', dataToGoToComponent);
     // const [myState, setMyState] = useState(props.foo)
    
@@ -25,8 +25,9 @@ function DataTable(props){
                     </tr>
                 </thead>
                 {/* <DataArea /> */}
-                <DataBody props={props.DataTable.DataArea}
+                <DataBody props={props}
                 />
+                console.console.log(props);
                 {/* dataNameInProps={dataToGoToComponent} */}
             </table>
         </wrapper>

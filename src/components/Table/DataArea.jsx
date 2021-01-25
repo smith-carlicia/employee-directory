@@ -32,6 +32,30 @@ export default class DataArea extends React.Component {
       { name: "DOB", width: "10%" }
     ]
 
+    handleInputChange = (event) => {
+      const { name, value } = event.target;
+  
+      const filteredEmployees = this.state.employees.filter((employee) => {
+        return employee.name.last.includes(value);
+      });
+  
+      this.setState({
+        [name]: value,
+        filteredEmployees: filteredEmployees,
+      });
+    };
+  
+    handleOnClick = () => {
+      // console.log("clicked button");
+      const sortedEmployees = this.state.filteredEmployees.sort((a, b) => {
+        return a.nat < b.nat ? -1 : 1;
+      });
+      // console.log(sortedEmployees);
+      this.setState({
+        employees: sortedEmployees,
+      });
+    };
+
     handleSort = () => {
         if (this.state.order === "descend") {
           this.setState({
@@ -42,7 +66,6 @@ export default class DataArea extends React.Component {
             order: "descend"
           })
     }}
-  
   
 
     render() {

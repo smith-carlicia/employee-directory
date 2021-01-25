@@ -1,16 +1,16 @@
 import React from "react";
 
 
-function DataBody({user}) {
+function DataBody(props) {
     
-    console.log({user});
+    console.log(props);
     return(
-        <tbody key={user}>
-            <td><img src={user.picture.medium} alt="user" /></td>
-            <td>{user.name.first.last}</td>
-            <td>{user.cell}</td>
-            <td>{user.email}</td>
-            <td>{user.dob}</td>
+        <tbody key="prop"s>
+            <td><img src={props.picture.medium} alt="prop" /></td>
+            <td>{props.name.first.last}</td>
+            <td>{props.cell}</td>
+            <td>{props.email}</td>
+            <td>{props.dob}</td>
         </tbody>
     )
 }
