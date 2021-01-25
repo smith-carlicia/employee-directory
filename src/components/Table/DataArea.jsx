@@ -8,12 +8,11 @@ export default class DataArea extends React.Component {
         const dataToGoToComponent = APICall();
 
         console.log(dataToGoToComponent);
-        console.log(props.dataNameInProps);
 
         fetch(dataToGoToComponent).then(results => {
           this.setState({
-            users: results.data.results,
-            filteredUsers: results.data.results
+            users: this.results,
+            filteredUsers: this.results
           });
         });
     }
@@ -73,8 +72,7 @@ export default class DataArea extends React.Component {
         <DataTable
         headings={this.headings}
         users={this.state.filteredUsers}
-        handleSort={this.handleSort}
-        // dataNameInProps={dataToGoToComponent}
+        handleSort={this.user}
       />
       )
     }

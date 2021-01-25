@@ -27,7 +27,6 @@ function DataTable(props){
                 {/* <DataArea /> */}
                 <DataBody props={props}
                 />
-                console.console.log(props);
                 {/* dataNameInProps={dataToGoToComponent} */}
             </table>
         </wrapper>
