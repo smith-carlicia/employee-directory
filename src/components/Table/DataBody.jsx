@@ -5,13 +5,15 @@ function DataBody(props) {
     
     console.log(props);
     return(
-        <tbody key="props">
+        <thead key="props">
+            <tr>
             <td><img src={props.picture} alt="props" /></td>
             <td>{props.name}</td>
             <td>{props.cell}</td>
             <td>{props.email}</td>
             <td>{props.dob}</td>
-        </tbody>
+            </tr>
+        </thead>
     )
 }
 

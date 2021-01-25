@@ -9,7 +9,7 @@ export default class DataArea extends React.Component {
 
         console.log(dataToGoToComponent);
 
-        fetch(dataToGoToComponent).then(results => {
+        (dataToGoToComponent).then(results => {
           this.setState({
             users: this.results,
             filteredUsers: this.results
