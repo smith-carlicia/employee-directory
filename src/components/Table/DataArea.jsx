@@ -8,15 +8,19 @@ export default class DataArea extends React.Component {
         const dataToGoToComponent = APICall();
 
         console.log(dataToGoToComponent);
+       
 
         (dataToGoToComponent).then(results => {
+           console.log(results);
           this.setState({
-            users: this.results,
-            filteredUsers: this.results
+            users: results.data.results,
+            filteredUsers: results.data.results
           });
         });
     }
+
     
+
     state = {
       users: [{}],
       order: "descend",

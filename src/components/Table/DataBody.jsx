@@ -5,32 +5,21 @@ import DataTable from './DataTable.jsx';
 function DataBody(props) {
     // const random = useContext(DataTable);
     // const array = random.results[0];
-    console.log(props);
     return(
-            <thead key={props.cell.i}>
-                {props.results.map((result, i) => (
+            <thead key={data.results}>
+                {data.results.map((results) => (
                      <tr>
-                     <ul>
-                     <li>
-                     <td><img src={result.picture} alt="props" /></td>
-                     </li>
-                     <li>
-                      <td>{result.name.first}</td>
-                     </li>
-                     <li>
-                      <td>{result.cell}</td>
-                      </li>
-                      <li>
-                      <td>{result.email}</td>
-                      </li>
-                      <li>
-                      <td>{result.dob}</td>
-                      </li>
-                     </ul>
-                   </tr>
-                ))}
+                    <td><img src={results.picture} alt="props" /></td>
+                        <td>{results.name}</td>
+                      <td>{results.cell}</td>
+                      <td>{results.email}</td>
+                      <td>{results.dob}</td>
+                    </tr>
+                )
+                    )}
+
         </thead>
-    )
-}
+    )}
+
 
 export default DataBody;
