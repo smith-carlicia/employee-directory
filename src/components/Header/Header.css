@@ -1,9 +1,8 @@
-.header {
-    background: darkblue;
+.fluid {
+    background: black;
     margin-top: 0px;
     height: 100%;
     border-bottom: 5px solid;
-    border-color: darkred;
 }
 
 h1 {

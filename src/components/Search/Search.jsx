@@ -3,31 +3,15 @@ import React from "react";
 import DataArea from '../Table/DataArea.jsx';
 // import DataBody from "../Table/DataBody.jsx";
 
-function Search(values, sortedUsers) {
-
-    // let handleSearchChange = event => {
-    //     console.log(event.target.value);
-    
-    //     const filter = event.target.value;
-    // //   <!-- create re-useable method that will filter the api response based on the value in the search box -->
-    //     const filteredList = this.users.filter;
-
-    //     (response => {
-    //       let values = Object.values(response)
-    //         .join("")
-    //         .toLowerCase();
-    //       })
-    //       return values.indexOf(filter.toLowerCase()) !== -1;
-    //     }
-    
-    //     setFilteredUsers(filteredList)
+function Search() {
 
     return (
         <div className="Search-container">
-            <input className="search-input">
+            <input className="search-input lg">
             </input>
-            <button className="searchButton btn-primary mb-2" type="submit">Search</button> */
-             <DataArea />
+            <button className="searchButton btn-info mb-2" type="submit">Search</button> 
+             <DataArea
+              />
          </div>
         
     )
