@@ -4,23 +4,6 @@ import APICall from '../../utils/API.jsx';
 
 export default class DataArea extends React.Component {
 
-    componentDidMount(props) {
-        const dataToGoToComponent = APICall();
-
-        console.log(dataToGoToComponent);
-       
-
-        (dataToGoToComponent).then(results => {
-           console.log(results);
-          this.setState({
-            users: results.data.results,
-            filteredUsers: results.data.results
-          });
-        });
-    }
-
-    
-
     state = {
       users: [{}],
       order: "descend",
@@ -50,16 +33,27 @@ export default class DataArea extends React.Component {
   
     handleOnClick = () => {
       // console.log("clicked button");
-      const sortedEmployees = this.state.filteredEmployees.sort((a, b) => {
-        return a.nat < b.nat ? -1 : 1;
-      });
+      let sortedEmployees;
+
+      if(this.state.order === "descend") {
+        sortedEmployees = this.state.filteredUsers.sort((a, b) => {
+          return a.name.last > b.name.last ? -1 : 1;
+        });
+      } else if (this.state.order === "ascend"){ 
+        sortedEmployees = this.state.filteredUsers.sort((a, b) => {
+          return a.name.last < b.name.last ? -1 : 1;
+        });
+      }
+      
       // console.log(sortedEmployees);
+      this.handleSort()
       this.setState({
         employees: sortedEmployees,
       });
     };
 
     handleSort = () => {
+      console.log("handleSort");
         if (this.state.order === "descend") {
           this.setState({
             order: "ascend"
@@ -69,14 +63,36 @@ export default class DataArea extends React.Component {
             order: "descend"
           })
     }}
+    
   
+    componentDidMount() {
 
+      APICall.theAPI().then(results => {
+        this.setState({
+          users: results.data.results,
+          filteredUsers: results.data.results
+        });
+      });
+        // const dataToGoToComponent = APICall();
+
+        // console.log(dataToGoToComponent);
+       
+
+        // (dataToGoToComponent).then(results => {
+        //    console.log(results);
+        //   this.setState({
+        //     users: results.data.results,
+        //     filteredUsers: results.data.results
+        //   });
+        // });
+    }
     render() {
+      console.log(this.props.searchTerm)
       return(
         <DataTable
         headings={this.headings}
         users={this.state.filteredUsers}
-        handleSort={this.user}
+        handleSort={this.handleOnClick}
       />
       )
     }

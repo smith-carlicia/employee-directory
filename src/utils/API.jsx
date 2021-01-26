@@ -1,13 +1,18 @@
 import axios from "axios";
 
-function API () {
-    return(
-      axios.get("https://randomuser.me/api/?results=50")
-    ) 
-  }
+// function API () {
+//     return(
+//       axios.get("https://randomuser.me/api/?results=50")
+//     ) 
+//   }
 
 
-export default API;
+
+export default {
+   theAPI: function(){
+     return axios.get("https://randomuser.me/api/?results=200&nat=us")
+   }
+};
 
 // export default {
 //     axios("https://randomuser.me/api/")

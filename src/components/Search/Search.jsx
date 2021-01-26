@@ -3,18 +3,30 @@ import React from "react";
 import DataArea from '../Table/DataArea.jsx';
 // import DataBody from "../Table/DataBody.jsx";
 
-function Search() {
+class Search extends React.Component {
 
-    return (
-        <div className="Search-container">
-            <input className="search-input lg">
-            </input>
-            <button className="searchButton btn-info mb-2" type="submit">Search</button> 
-             <DataArea
-              />
-         </div>
-        
-    )
+    state = {
+        searchTerm: ""
+    }
+    
+    handleInputChange = (event) => {
+        this.setState({searchTerm: event.target.value})
+    }
+
+    render() {
+        return (
+            <div className="Search-container">
+                <input className="search-input lg"
+                onChange={this.handleInputChange}>
+                </input>
+                <button className="searchButton btn-info mb-2" type="submit">Search</button> 
+                 <DataArea
+                 searchTerm={this.state.searchTerm}
+                  />
+             </div>
+            
+        )
+    }
 }
 
 export default Search;
