@@ -19,6 +19,11 @@ class Search extends React.Component {
                 <input className="search-input lg"
                 onChange={this.handleInputChange}>
                 </input>
+                    {/* <ul>
+                        {employee.map(name => (
+                            <li>{name}</li>
+                        ))}
+                    </ul> */}
                 <button className="searchButton btn-info mb-2" type="submit">Search</button> 
                  <DataArea
                  searchTerm={this.state.searchTerm}
