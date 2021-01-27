@@ -8,22 +8,9 @@ function DataBody({users}) {
         const year = dateArray[0];
         const month = dateArray[1];
     }
-    // const  employeeInfo = useContext(DataTable);
-    // const array = employeeInfo.results[0];
-    return(
-        //     <thead key={props.results} >
-        //         {props.array.map((results) => (
-                    
-        //              <tr>
-        //                 <td><img src={props.picture} alt="props" /></td>
-        //                 <td>{props.name}</td>
-        //                 <td>{props.cell}</td>
-        //                 <td>{props.email}</td>
-        //                 <td>{props.dob}</td>
-        //             </tr>
-        //         ))}
 
-        // </thead>
+    return(
+
         <tbody>
 {users[0] !== undefined && users[0].name !== undefined ? (
     users.map(({login, name, phone, picture, email, dob})=>{

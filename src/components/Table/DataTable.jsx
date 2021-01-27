@@ -5,31 +5,8 @@ import DataBody from "./DataBody.jsx";
 // import APICall from '../../utils/API.jsx';
 
 function DataTable({headings, users, handleSort}){
-    // const dataToGoToComponent = APICall();
-
-    // console.log(props);
-    // console.log('API Call Data: ', dataToGoToComponent);
-    // const [myState, setMyState] = useState(props.foo)
    
-
     return(
-        // <div className="container table">
-        //     <table className="table-bordered table-striped">
-        //         <thead>
-        //             <tr>
-        //                 <th scope="col">Image</th>
-        //                 <th scope="col">Name</th>
-        //                 <th scope="col">Phone</th>
-        //                 <th scope="col">Email</th>
-        //                 <th scope="col">DOB</th>
-        //             </tr>
-        //         </thead>
-        //         {/* <DataArea /> */}
-        //         <DataBody props={props}
-        //         />
-        //         {/* dataNameInProps={dataToGoToComponent} */}
-        //     </table>
-        // </div>
 
         <div className="datatable mt-5">
             <table 

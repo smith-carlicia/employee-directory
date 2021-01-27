@@ -52,7 +52,7 @@ export default class DataArea extends React.Component {
       });
     };
 
-    handleSort = () => {
+    handleSort = heading => {
       console.log("handleSort");
         if (this.state.order === "descend") {
           this.setState({
@@ -63,6 +63,36 @@ export default class DataArea extends React.Component {
             order: "descend"
           })
     }}
+
+  // sortingData = (a, b) => {
+  //     if(this.state.order === "ascend"){
+  //       if( a.headings === undefined){
+  //         return 1
+  //       }
+  //       else if (b.headings === undefined){
+  //         return -1
+  //       }
+
+  //       else if ("headings" === 'name'){
+  //         return a.headings.first.localeCompare(b.headings.first);
+  //       }else{
+  //         return a.headings -b.headings;
+  //       }
+  //     } else {
+  //       if(a.headings === undefined){
+  //         return 1;
+  //       }else if (b.headings === undefined){
+  //         return -1;
+  //       } else if ("headings" === 'name'){
+  //         returnb (headings.first.localeCompare(a.headings.first))
+  //       } else {
+  //         returnb (headings - a.headings);
+  //       }
+  //     }
+     
+  //   }
+// sortThem = this.state.filteredUsers.sort(sortingData);
+// this.setState({filteredUsers:sortThem})
     
   
     componentDidMount() {
